@@ -8,7 +8,7 @@ const baseURL = (
 
 const api = axios.create({
   baseURL,
-  timeout: 15000,
+  timeout: 15000,    
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -57,5 +57,7 @@ api.interceptors.response.use(
     return Promise.reject(error)
   },
 )
+
+
 
 export default api
